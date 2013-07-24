@@ -17,7 +17,7 @@ object Utils {
       println("Webcam in use ...")
     } else {
       try {
-        Thread.sleep(1500);
+        Thread.sleep(2000);
       } catch {
         case ie: InterruptedException => ie.printStackTrace()
       }

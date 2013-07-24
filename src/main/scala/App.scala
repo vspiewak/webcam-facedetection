@@ -2,7 +2,6 @@ import java.awt.Dimension
 import org.opencv.core.Core
 import org.opencv.highgui.{Highgui, VideoCapture}
 import scala.swing.{BorderPanel, MainFrame, SimpleSwingApplication}
-import scala.concurrent.ops._
 
 object App extends SimpleSwingApplication {
 

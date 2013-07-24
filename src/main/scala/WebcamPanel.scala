@@ -1,3 +1,4 @@
+import main.scala.FaceDetector
 import org.opencv.highgui.VideoCapture
 import scala.concurrent.ops._
 import scala.swing.Panel
@@ -9,6 +10,8 @@ class WebcamPanel(capture: VideoCapture) extends Panel {
 
   protected var buffer: BufferedImage = captureImage()
 
+  def faceDetector = new FaceDetector()
+
   override def paint(g: Graphics2D) {
     super.paint(g)
 
@@ -19,6 +22,7 @@ class WebcamPanel(capture: VideoCapture) extends Panel {
   def captureImage(): BufferedImage = {
     val image = new Mat()
     capture.read(image)
+    faceDetector.detect(image)
     Utils.matToBuffer(image)
   }
 
