@@ -17,6 +17,11 @@ Run on Windows (You must compile *first* OpenCV into lib/win):
 
     sbt -Djava.library.path=lib/win run
 
+TODO:
+* use async to refresh ui
+* include libjpeg static for linux
+* compile for Windows
+
 Related links:
 * http://experienceopencv.blogspot.fr/2011/02/cascade-classifier-and-face-detection.html
 * http://note.sonots.com/SciSoftware/haartraining.html
